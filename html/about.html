@@ -13,6 +13,9 @@
     rel="stylesheet" />
 
   <script src="../javascript/about.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script defer src="../subscribe.js"></script>
+  <script defer src="../join_newsletter.js"></script>
 </head>
 
 <body>
@@ -233,14 +236,14 @@
     </div>
   </div>
   <div class="subscribe">
-    <form>
+    <form onsubmit="join(event)">
       <h1 class="h1-s">See Latest Marketing Strategies</h1>
       <h4>SUBSCRIBE !!!</h4>
       <div class="input-container input">
-        <form action="subscribed.php" method="post">
+        <div>
           <input type="text" id="name_user" name="name_user" placeholder="Name" required />
           <input type="text" id="email" name="email" placeholder="Email Address" required />
-        </form>
+        </div>
       </div>
       <br /><br />
       <input class="submit-btn" type="submit" value="Submit" />
@@ -324,10 +327,10 @@
         </div>
       </div>
       <div class="form">
-        <form action="subscribed.php" method="post">
+        <form onsubmit="subscribe(event)">
           <h4>See Latest marketing strategies</h4>
           <h4>Join us !!!</h4>
-          <input class="email-address" type="text" id="userInput" name="userInput"
+          <input class="email-address" type="text" id="subscribe_email" name="userInput"
             placeholder="Email Address" /><br /><br />
           <input class="submit-btn" type="submit" value="Subscribe" />
         </form>
